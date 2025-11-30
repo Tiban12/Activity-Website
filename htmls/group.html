@@ -6,9 +6,92 @@
     <title>Group Photos - Esteban's Portfolio</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/group.css">
+    <style>
+        .group-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .group-container {
+            display: flex;
+            gap: 3rem;
+            max-width: 1200px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .group-content {
+            flex: 1;
+        }
+
+        .members-list {
+            flex: 0 0 300px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .members-list h3 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+        }
+
+        .members-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .members-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .members-list li:last-child {
+            border-bottom: none;
+        }
+
+        .members-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .members-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .members-list::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .group-container {
+                flex-direction: column;
+            }
+
+            .members-list {
+                flex: 1;
+                width: 100%;
+                max-height: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -22,7 +105,6 @@
             </div>
         </div>
     </nav>
-
     <!-- Page Navigation Buttons -->
     <div class="page-navigation">
         <a href="family.html" class="page-nav-arrow">
@@ -30,16 +112,61 @@
             <span>Previous</span>
         </a>
     </div>
-
     <!-- GROUP SECTION WITH FULL BACKGROUND -->
     <section class="group-section">
-        <div class="group-content">
-            <h2 class="group-title">Dyislers</h2>
-            <p class="group-description">
-                My amazing coding team. Together we solve problems, build projects, and create innovative solutions. United by our passion for technology and friendship.
-            </p>
+        <div class="group-container">
+            <div class="group-content">
+                <h2 class="group-title">Dyislers</h2>
+                <p class="group-description">
+                    My amazing coding team. Together we solve problems, build projects, and create innovative solutions. United by our passion for technology and friendship.
+                </p>
+            </div>
+            <div class="members-list">
+                <h3>Team Members</h3>
+                <ul>
+                    <li>ABANCE</li>
+                    <li>ALVINABIADO, MARK JHON</li>
+                    <li>BACUN, JOHANNA CHRISTINE</li>
+                    <li>BANGGUIYAO, MARK KEVIN</li>
+                    <li>BARRIOGA, ESTEBAN JR.</li>
+                    <li>BEKISAN, SHANIA FAITH</li>
+                    <li>BUCATAN, JANRYL</li>
+                    <li>BULLAGAY, HEZEKIAH</li>
+                    <li>CASTELLANO, KATHERINE NICOLLE</li>
+                    <li>CELINO, LAWRENCE DAVE</li>
+                    <li>COSTINA, EUGENE REY</li>
+                    <li>DULNUAN, JESSIE</li>
+                    <li>EKWASEN, JAN MARK</li>
+                    <li>ESTEPA, BENCY BLUE</li>
+                    <li>FERNANDEZ, SAM ARCHER</li>
+                    <li>KINDAHAN, JOSHUA</li>
+                    <li>LICUPA, JEREMIE CRAIG</li>
+                    <li>LISKING, GYAHN</li>
+                    <li>LUNAG, AZRIEL JARED</li>
+                    <li>MARKUB, JUSTIN</li>
+                    <li>NAGEN, IVAN TROY</li>
+                    <li>NOVENTA, GLAIZA MAE</li>
+                    <li>ONNON, BRIAN BRUCE</li>
+                    <li>PADIOS, JIMUEL</li>
+                    <li>PANELO, PRINCE MARKY</li>
+                    <li>PANES, RALPH MATTHEW</li>
+                    <li>PATAUEG, JEHNNIE LYN</li>
+                    <li>QUINTINITA, LANZ JYR</li>
+                    <li>QUIROS, JECARED</li>
+                    <li>REQUIERO, JAY-R</li>
+                    <li>RICO, LOUIS INIGO</li>
+                    <li>SAGAPEN, BENJAMIN</li>
+                    <li>SAN PEDRO, RALPH MATTHEW</li>
+                    <li>SANTIAGO, ARTHUR JOHN</li>
+                    <li>SARMIENTO, JUSTINE VON</li>
+                    <li>SOLEY, LEAN JOBELLE</li>
+                    <li>TACIO, REYAN</li>
+                    <li>TALIC, KARIANNE CLARISSE</li>
+                    <li>UMAGING, KAZLER CARL</li>
+                    <li>VENTURA, JAMAL</li>
+                </ul>
+            </div>
         </div>
     </section>
-
 </body>
 </html>
