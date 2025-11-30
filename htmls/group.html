@@ -9,8 +9,8 @@
     <style>
         .group-section {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
             min-height: 80vh;
             padding: 2rem;
             position: relative;
@@ -21,20 +21,22 @@
             gap: 3rem;
             max-width: 1200px;
             width: 100%;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .group-content {
             flex: 1;
+            padding-top: 2rem;
         }
 
         .members-list {
             flex: 0 0 300px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.75);
             padding: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             height: fit-content;
+            backdrop-filter: blur(5px);
         }
 
         .members-list h3 {
