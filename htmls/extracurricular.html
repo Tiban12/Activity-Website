@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracurricular Activities - Esteban</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/extracurricular.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Esteban T. Barrioga Jr.</div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../htmls/educationalAttainment.html" class="nav-link">Education</a>
+                <a href="../htmls/extracurricular.html" class="nav-link active">Activities</a>
+                <a href="../htmls/family.html" class="nav-link">Family</a>
+               
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Navigation Buttons -->
+    <div class="page-navigation">
+        <a href="educationalAttainment.html" class="page-nav-arrow">
+            <span>←</span>
+            <span>Back</span>
+        </a>
+        <a href="family.html" class="page-nav-arrow">
+            <span>Next</span>
+            <span>→</span>
+        </a>
+    </div>
+
+    <!-- EXTRACURRICULAR SECTION -->
+    <section class="extracurricular-section">
+        <h2 class="section-title">ACHIEVEMENTS</h2>
+        
+        <div class="extracurricular-wrapper">
+            <!-- LEFT: School Cards Grid -->
+            <div class="schools-grid">
+                
+                <!-- 1. Manuel L. Quezon Elementary -->
+                <div class="school-card active" data-school="manuel">
+                    <div class="card-image-container">
+                        <img src="../resources/manuel-school.jpg" alt="Manuel L. Quezon Elementary School" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="school-name">Manuel L. Quezon</h3>
+                        <span class="school-level">ELEMENTARY</span>
+                    </div>
+                </div>
+
+                <!-- 2. Saint Louis School SLP 1 -->
+                <div class="school-card" data-school="slp1">
+                    <div class="card-image-container">
+                        <img src="../resources/slp-1.jpg" alt="Saint Louis School SLP 1" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="school-name">Saint Louis School</h3>
+                        <span class="school-level">SLP 1</span>
+                    </div>
+                </div>
+
+                <!-- 3. SLP Church -->
+                <div class="school-card" data-school="church">
+                    <div class="card-image-container">
+                        <img src="../resources/slp-church.jpg" alt="SLP Church School" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="school-name">SLP Church</h3>
+                        <span class="school-level">HIGH SCHOOL</span>
+                    </div>
+                </div>
+
+                <!-- 4. University of the Cordilleras -->
+                <div class="school-card" data-school="uc">
+                    <div class="card-image-container">
+                        <img src="../resources/uc-picture.jpg" alt="University of the Cordilleras" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="school-name">University of the Cordilleras</h3>
+                        <span class="school-level">COLLEGE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Activities Panel -->
+            <div class="activities-panel">
+                
+                <!-- Manuel Activities -->
+                <div class="school-activities active" id="activities-manuel">
+                    <h3 class="activities-title">Manuel L. Quezon Elementary</h3>
+                    <div class="activities-section">
+                        <h4 class="activities-section-title">📋 Activities</h4>
+                        <div class="activity-item">
+                            <span class="activity-icon">🏅</span>
+                            <div class="activity-text">
+                                <h5>Sports Day Champion</h5>
+                                <p>Won multiple events during annual sports day competitions</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">🔬</span>
+                            <div class="activity-text">
+                                <h5>Science Club</h5>
+                                <p>Explored scientific experiments and participated in science fairs</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">🎤</span>
+                            <div class="activity-text">
+                                <h5>Student Ambassador</h5>
+                                <p>Represented the school in academic and cultural events</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="educationalAttainment.html" class="back-btn">← Back to Education</a>
+                </div>
+
+                <!-- SLP 1 Activities -->
+                <div class="school-activities" id="activities-slp1">
+                    <h3 class="activities-title">Saint Louis School - SLP 1</h3>
+                    <div class="activities-section">
+                        <h4 class="activities-section-title">📋 Activities</h4>
+                        <div class="activity-item">
+                            <span class="activity-icon">🏀</span>
+                            <div class="activity-text">
+                                <h5>Basketball Team</h5>
+                                <p>Member of the school basketball team in inter-school tournaments</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">🎵</span>
+                            <div class="activity-text">
+                                <h5>Music Club</h5>
+                                <p>Active member exploring guitar and piano with fellow musicians</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">📋</span>
+                            <div class="activity-text">
+                                <h5>Student Council</h5>
+                                <p>Served as representative, organizing school events and activities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="educationalAttainment.html" class="back-btn">← Back to Education</a>
+                </div>
+
+                <!-- Church Activities -->
+                <div class="school-activities" id="activities-church">
+                    <h3 class="activities-title">SLP Church School</h3>
+                    <div class="activities-section">
+                        <h4 class="activities-section-title">📋 Activities</h4>
+                        <div class="activity-item">
+                            <span class="activity-icon">🎶</span>
+                            <div class="activity-text">
+                                <h5>Choir Group</h5>
+                                <p>Sang in the parish choir during masses and special celebrations</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">⛪</span>
+                            <div class="activity-text">
+                                <h5>Youth Ministry</h5>
+                                <p>Active member organizing faith-based activities</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">💝</span>
+                            <div class="activity-text">
+                                <h5>Community Outreach</h5>
+                                <p>Helped organize charity events and community support programs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="educationalAttainment.html" class="back-btn">← Back to Education</a>
+                </div>
+
+                <!-- UC Activities - No activities yet -->
+                <div class="school-activities" id="activities-uc">
+                    <h3 class="activities-title">University of the Cordilleras</h3>
+                    <div class="activities-section">
+                        <h4 class="activities-section-title">📋 Activities</h4>
+                        <div class="no-content">
+                            <span class="no-content-icon">📝</span>
+                            <p>Currently pursuing studies. Activities to be updated soon!</p>
+                        </div>
+                    </div>
+                    <a href="educationalAttainment.html" class="back-btn">← Back to Education</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get school from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const school = urlParams.get('school') || 'manuel';
+
+        const schoolCards = document.querySelectorAll('.school-card');
+        const activitiesPanels = document.querySelectorAll('.school-activities');
+
+        // Set initial active state from URL
+        schoolCards.forEach(c => c.classList.remove('active'));
+        activitiesPanels.forEach(p => p.classList.remove('active'));
+        
+        const initialCard = document.querySelector(`[data-school="${school}"]`);
+        const initialPanel = document.getElementById(`activities-${school}`);
+        if (initialCard) initialCard.classList.add('active');
+        if (initialPanel) initialPanel.classList.add('active');
+
+        // Click handlers
+        schoolCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                const selectedSchool = card.getAttribute('data-school');
+                schoolCards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                activitiesPanels.forEach(panel => panel.classList.remove('active'));
+                document.getElementById(`activities-${selectedSchool}`).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

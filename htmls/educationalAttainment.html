@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteban - Educational Attainment</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/education.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Esteban T. Barrioga Jr.</div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../htmls/educationalAttainment.html" class="nav-link active">Education</a>
+                <a href="../htmls/extracurricular.html" class="nav-link">Activities</a>
+                <a href="../htmls/family.html" class="nav-link">Family</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Navigation Buttons -->
+    <div class="page-navigation">
+        <a href="../index.html" class="page-nav-arrow">
+            <span>←</span>
+            <span>Back</span>
+        </a>
+        <a href="extracurricular.html" class="page-nav-arrow">
+            <span>Next</span>
+            <span>→</span>
+        </a>
+    </div>
+
+    <!-- EDUCATIONAL ATTAINMENT SECTION -->
+    <section class="education-section">
+        <h2 class="section-title">EDUCATIONAL ATTAINMENT</h2>
+        
+        <div class="education-wrapper">
+            <!-- LEFT: School Cards Grid -->
+            <div class="schools-grid">
+                
+                <!-- 1. Manuel L. Quezon Elementary -->
+                <div class="school-card active" data-school="manuel">
+                    <div class="card-image-container">
+                        <img src="../resources/manuel-school.jpg" alt="Manuel L. Quezon Elementary School" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="school-name">Manuel L. Quezon</h3>
+                        <span class="school-level">ELEMENTARY</span>
+                    </div>
+                </div>
+
+                <!-- 2. Saint Louis School SLP 1 -->
+                <div class="school-card" data-school="slp1">
+                    <div class="card-image-container">
+                        <img src="../resources/slp-1.jpg" alt="Saint Louis School SLP" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="school-name">Saint Louis School</h3>
+                        <span class="school-level">HIGH SCHOOL</span>
+                    </div>
+                </div>
+
+                <!-- 3. SLP Church -->
+                <div class="school-card" data-school="church">
+                    <div class="card-image-container">
+                        <img src="../resources/slp-church.jpg" alt="SLP Church School" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="school-name">SLP Church</h3>
+                        <span class="school-level">HIGH SCHOOL</span>
+                    </div>
+                </div>
+
+                <!-- 4. University of the Cordilleras -->
+                <div class="school-card" data-school="uc">
+                    <div class="card-image-container">
+                        <img src="../resources/uc-picture.jpg" alt="University of the Cordilleras" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="school-name">University of the Cordilleras</h3>
+                        <span class="school-level">COLLEGE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Details Panel -->
+            <div class="details-panel">
+                
+                <!-- Manuel Details -->
+                <div class="school-details active" id="details-manuel">
+                    <h3 class="details-title">Manuel L. Quezon Elementary</h3>
+                    <div class="details-section">
+                        <h4 class="details-section-title">🏆 Achievements</h4>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">⭐</span>
+                            <div class="achievement-text">
+                                <h5>Academic Excellence</h5>
+                                <p>Consistent high performer in all subjects</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">🥇</span>
+                            <div class="achievement-text">
+                                <h5>Sports Day Champion</h5>
+                                <p>Gold medalist in athletic competitions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="extracurricular.html?school=manuel" class="show-more-btn">Show More</a>
+                </div>
+
+                <!-- SLP 1 Details -->
+                <div class="school-details" id="details-slp1">
+                    <h3 class="details-title">Saint Louis School - SLP 1</h3>
+                    <div class="details-section">
+                        <h4 class="details-section-title">🏆 Achievements</h4>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">🏆</span>
+                            <div class="achievement-text">
+                                <h5>High Honor</h5>
+                                <p>Top academic performer with excellent grades</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">📚</span>
+                            <div class="achievement-text">
+                                <h5>Honor Student</h5>
+                                <p>Consistent academic excellence throughout the year</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="extracurricular.html?school=slp1" class="show-more-btn">Show More</a>
+                </div>
+
+                <!-- Church Details -->
+                <div class="school-details" id="details-church">
+                    <h3 class="details-title">SLP Church School</h3>
+                    <div class="details-section">
+                        <h4 class="details-section-title">🏆 Achievements</h4>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">✨</span>
+                            <div class="achievement-text">
+                                <h5>Character Award</h5>
+                                <p>Excellence in values, faith, and community service</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">🎶</span>
+                            <div class="achievement-text">
+                                <h5>Choir Excellence</h5>
+                                <p>Outstanding performance in parish choir</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="extracurricular.html?school=church" class="show-more-btn">Show More</a>
+                </div>
+
+                <!-- UC Details - No achievements yet -->
+                <div class="school-details" id="details-uc">
+                    <h3 class="details-title">University of the Cordilleras</h3>
+                    <div class="details-section">
+                        <h4 class="details-section-title">🏆 Achievements</h4>
+                        <div class="no-content">
+                            <span class="no-content-icon">🎓</span>
+                            <p>Currently pursuing studies. Achievements coming soon!</p>
+                        </div>
+                    </div>
+                    <div class="details-section">
+                        <h4 class="details-section-title">📋 Extracurricular</h4>
+                        <div class="no-content">
+                            <span class="no-content-icon">📝</span>
+                            <p>Activities to be updated soon.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const schoolCards = document.querySelectorAll('.school-card');
+        const detailsPanels = document.querySelectorAll('.school-details');
+
+        schoolCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                const selectedSchool = card.getAttribute('data-school');
+                schoolCards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                detailsPanels.forEach(panel => panel.classList.remove('active'));
+                document.getElementById(`details-${selectedSchool}`).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

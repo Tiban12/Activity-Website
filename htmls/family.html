@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family - Esteban's Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/family.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Esteban T. Barrioga Jr.</div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="educationalAttainment.html" class="nav-link">Education</a>
+                <a href="extracurricular.html" class="nav-link">Activities</a>
+                <a href="family.html" class="nav-link active">Family</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Navigation Buttons -->
+    <div class="page-navigation">
+        <a href="extracurricular.html" class="page-nav-arrow">
+            <span>←</span>
+            <span>Previous</span>
+        </a>
+        <a href="group.html" class="page-nav-arrow">
+            <span>Next</span>
+            <span>→</span>
+        </a>
+    </div>
+
+    <!-- FAMILY SECTION -->
+    <section class="family-section">
+        <h2 class="section-title">MY FAMILY</h2>
+        
+        <div class="family-wrapper">
+            <!-- LEFT: Family Cards Grid -->
+            <div class="family-grid">
+                
+                <!-- Mother Card -->
+                <div class="family-card active" data-member="mother">
+                    <div class="card-image-container">
+                        <img src="../resources/hug-1.jpg" alt="Mother" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Mother</h3>
+                        <span class="member-role">Charito Barrioga</span>
+                    </div>
+                </div>
+
+                <!-- Father Card -->
+                <div class="family-card" data-member="father">
+                    <div class="card-image-container">
+                        <img src="../resources/shake-1.jpg" alt="Father" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Father</h3>
+                        <span class="member-role">Esteban Barrioga</span>
+                    </div>
+                </div>
+
+                <!-- Sibling 1 Card -->
+                <div class="family-card" data-member="sibling1">
+                    <div class="card-image-container">
+                        <img src="../resources/siblings-1.jpg" alt="Sibling 1" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Sibling</h3>
+                        <span class="member-role">Kristine Mae Barrioga</span>
+                    </div>
+                </div>
+
+                <!-- Sibling 2 Card -->
+                <div class="family-card" data-member="sibling2">
+                    <div class="card-image-container">
+                        <img src="../resources/siblings-2.jpg" alt="Sibling 2" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Sibling</h3>
+                        <span class="member-role">Steven Charz Barrioga</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Quotation Panel -->
+            <div class="quotation-panel">
+                
+                <!-- Mother Quotation -->
+                <div class="member-quotation active" id="quote-mother">
+                    <h3 class="quotation-title">Mother</h3>
+                    <div class="quotation-section">
+                        <span class="quote-icon">"</span>
+                        <p class="quote-text">A mother's love is unconditional and everlasting. She guides with wisdom, nurtures with care, and supports with endless devotion.</p>
+                        <span class="quote-icon closing">"</span>
+                    </div>
+                </div>
+
+                <!-- Father Quotation -->
+                <div class="member-quotation" id="quote-father">
+                    <h3 class="quotation-title">Father</h3>
+                    <div class="quotation-section">
+                        <span class="quote-icon">"</span>
+                        <p class="quote-text">A father's strength and guidance shape the foundation of who we become. He leads by example and inspires with quiet determination.</p>
+                        <span class="quote-icon closing">"</span>
+                    </div>
+                </div>
+
+                <!-- Sibling 1 Quotation -->
+                <div class="member-quotation" id="quote-sibling1">
+                    <h3 class="quotation-title">Sibling</h3>
+                    <div class="quotation-section">
+                        <span class="quote-icon">"</span>
+                        <p class="quote-text">Siblings are the best friends you never asked for but can't imagine life without. Together we share laughter, memories, and unbreakable bonds.</p>
+                        <span class="quote-icon closing">"</span>
+                    </div>
+                </div>
+
+                <!-- Sibling 2 Quotation -->
+                <div class="member-quotation" id="quote-sibling2">
+                    <h3 class="quotation-title">Sibling</h3>
+                    <div class="quotation-section">
+                        <span class="quote-icon">"</span>
+                        <p class="quote-text">A sibling is both your mirror and your opposite. They challenge you to grow and stand by you through every adventure.</p>
+                        <span class="quote-icon closing">"</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const familyCards = document.querySelectorAll('.family-card');
+        const quotationPanels = document.querySelectorAll('.member-quotation');
+
+        familyCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                const selectedMember = card.getAttribute('data-member');
+                
+                // Remove active class from all cards
+                familyCards.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked card
+                card.classList.add('active');
+                
+                // Hide all quotation panels
+                quotationPanels.forEach(panel => panel.classList.remove('active'));
+                
+                // Show selected quotation panel
+                document.getElementById(`quote-${selectedMember}`).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

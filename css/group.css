@@ -1,0 +1,230 @@
+/* ============================================
+   GROUP PAGE - FULL SCREEN BACKGROUND
+   Single image background, no slideshow
+   ============================================ */
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make navbar more transparent */
+.navbar {
+    background: rgba(15, 15, 15, 0.3) !important;
+    backdrop-filter: blur(8px);
+}
+
+.group-section {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 8rem;
+    background-image: url('../resources/group-1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Dark overlay for better text readability */
+.group-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(15, 15, 15, 0.3) 0%,
+        rgba(15, 15, 15, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+/* Content container - NO BACKGROUND */
+.group-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.group-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: slideInRight 0.8s ease-out 0.2s both;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8));
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.group-description {
+    font-size: 1rem;
+    color: var(--light-text);
+    line-height: 1.6;
+    margin: 0;
+    animation: slideInRight 0.8s ease-out 0.4s both;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Page Navigation Buttons (Bottom Right) */
+.page-navigation {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 100;
+}
+
+.page-nav-arrow {
+    padding: 0.8rem 1.5rem;
+    background: rgba(15, 15, 15, 0.8);
+    border: 2px solid var(--primary-color);
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page-nav-arrow:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* MacBook / Laptop */
+@media (max-width: 1440px) {
+    .group-title {
+        font-size: 2.2rem;
+    }
+    
+    .group-description {
+        font-size: 0.95rem;
+    }
+    
+    .group-content {
+        max-width: 550px;
+    }
+}
+
+/* Smaller Laptops */
+@media (max-width: 1024px) {
+    .group-title {
+        font-size: 2rem;
+    }
+    
+    .group-description {
+        font-size: 0.9rem;
+    }
+    
+    .group-content {
+        max-width: 500px;
+    }
+    
+    .group-section {
+        padding-bottom: 7rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto;
+    }
+    
+    .group-section {
+        height: 100vh;
+        background-attachment: scroll;
+        padding-bottom: 6rem;
+    }
+    
+    .group-title {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .group-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    .group-content {
+        max-width: 90%;
+    }
+    
+    .page-navigation {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .page-nav-arrow {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .group-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .group-description {
+        font-size: 0.8rem;
+    }
+    
+    .group-section {
+        padding-bottom: 5rem;
+    }
+}

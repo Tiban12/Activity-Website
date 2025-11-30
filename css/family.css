@@ -1,0 +1,414 @@
+/* ============================================
+   FAMILY PAGE - CARD LAYOUT
+   Same style as extracurricular page
+   ============================================ */
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+.family-section {
+    height: 100vh;
+    overflow: hidden;
+    padding: 6rem 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 1) 0%, rgba(40, 15, 30, 0.3) 100%);
+}
+
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+.family-wrapper {
+    max-width: 1300px;
+    width: 100%;
+    gap: 2.5rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: stretch;
+}
+
+/* Family Cards Grid */
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.family-card {
+    background: rgba(255, 107, 53, 0.08);
+    border: 2px solid var(--border-color);
+    padding: 0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.family-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+}
+
+.family-card.active {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-image-container {
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    background: rgba(15, 15, 15, 0.3);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.family-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.member-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.member-role {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Quotation Panel */
+.quotation-panel {
+    background: rgba(255, 107, 53, 0.05);
+    border: 2px solid var(--accent-color);
+    padding: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    min-height: 400px;
+}
+
+.member-quotation {
+    display: none;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.member-quotation.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.quotation-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.quotation-section {
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(247, 147, 30, 0.1), rgba(255, 107, 53, 0.1));
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: var(--accent-color);
+    font-family: Georgia, serif;
+    line-height: 0.5;
+    opacity: 0.5;
+}
+
+.quote-icon.closing {
+    float: right;
+    margin-top: 1rem;
+}
+
+.quote-text {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    line-height: 1.8;
+    margin: 1.5rem 0;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Page Navigation Buttons */
+.page-navigation {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 100;
+}
+
+.page-nav-arrow {
+    padding: 0.8rem 1.5rem;
+    background: rgba(15, 15, 15, 0.9);
+    border: 2px solid var(--primary-color);
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page-nav-arrow:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* MacBook / Laptop */
+@media (max-width: 1440px) {
+    .family-section {
+        padding: 5rem 2rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .family-wrapper {
+        max-width: 1100px;
+        gap: 2rem;
+    }
+    
+    .card-image-container {
+        height: 220px;
+    }
+    
+    .quotation-panel {
+        min-height: 350px;
+    }
+    
+    .quote-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Smaller Laptops */
+@media (max-width: 1024px) {
+    .family-section {
+        padding: 4.5rem 1.5rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .family-wrapper {
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .family-grid {
+        gap: 1rem;
+    }
+    
+    .card-image-container {
+        height: 200px;
+    }
+    
+    .card-content {
+        padding: 0.8rem;
+    }
+    
+    .member-name {
+        font-size: 1rem;
+    }
+    
+    .member-role {
+        font-size: 0.7rem;
+    }
+    
+    .quotation-panel {
+        padding: 1.5rem;
+        min-height: 300px;
+    }
+    
+    .quotation-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .quote-text {
+        font-size: 1rem;
+    }
+    
+    .quote-icon {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto;
+    }
+    
+    .family-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 5rem 1.5rem 2rem;
+        justify-content: flex-start;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .family-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .family-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .card-image-container {
+        height: 180px;
+    }
+    
+    .quotation-panel {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .quotation-title {
+        font-size: 1.3rem;
+    }
+    
+    .quote-text {
+        font-size: 0.95rem;
+    }
+    
+    .page-navigation {
+        bottom: 1rem;
+        right: 1rem;
+        gap: 0.5rem;
+    }
+    
+    .page-nav-arrow {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .family-section {
+        padding: 4.5rem 1rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .family-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .card-image-container {
+        height: 250px;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .member-name {
+        font-size: 1.1rem;
+    }
+    
+    .member-role {
+        font-size: 0.75rem;
+    }
+    
+    .quotation-panel {
+        padding: 1.2rem;
+    }
+    
+    .quotation-section {
+        padding: 1.5rem;
+    }
+    
+    .quotation-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .quote-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .quote-icon {
+        font-size: 2.5rem;
+    }
+}
